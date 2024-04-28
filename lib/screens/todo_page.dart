@@ -70,7 +70,7 @@ class _TodoPageState extends State<TodoPage> {
                     onChanged: (bool? value) {
                       context
                           .read<TodoListProvider>()
-                          .toggleStatus(index, value!);
+                          .toggleStatus(todo.id!, value!);
                     },
                   ),
                   trailing: Row(

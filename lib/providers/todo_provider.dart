@@ -40,7 +40,8 @@ class TodoListProvider with ChangeNotifier {
     notifyListeners();
   }
 
-  void toggleStatus(int index, bool status) {
+  void toggleStatus(String id, bool status) async {
+    await firebaseService.toggleStatus(id, status);
     notifyListeners();
   }
 }
