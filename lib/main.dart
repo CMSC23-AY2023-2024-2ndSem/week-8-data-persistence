@@ -4,7 +4,7 @@
   Description: Sample todo app with Firebase 
 */
 import 'package:firebase_core/firebase_core.dart';
-import 'package:week7_networking_discussion/screens/login_page.dart';
+import 'package:week7_networking_discussion/screens/signup_page.dart';
 import 'firebase_options.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -35,10 +35,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'SimpleTodo',
-      initialRoute: '/login',
+      initialRoute: '/signup',
       routes: {
         '/': (context) => const TodoPage(),
-        '/login': (context) => const LoginPage(),
+        '/signup': (context) => const SignUpPage(),
       },
       theme: ThemeData(
         primarySwatch: Colors.blue,
