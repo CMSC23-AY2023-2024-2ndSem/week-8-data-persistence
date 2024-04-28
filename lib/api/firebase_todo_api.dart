@@ -36,4 +36,14 @@ class FirebaseTodoAPI {
       return "Error in ${e.code}: ${e.message}";
     }
   }
+
+  Future<String> toggleStatus(String id, bool value) async {
+    try {
+      await db.collection("todos").doc(id).update({"completed": value});
+
+      return "Successfully toggled!";
+    } on FirebaseException catch (e) {
+      return "Error in ${e.code}: ${e.message}";
+    }
+  }
 }
